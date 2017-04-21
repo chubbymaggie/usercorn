@@ -1,0 +1,14 @@
+language: c
+sudo: true
+dist: trusty
+cache: ccache
+
+before_install:
+  - date
+  - make deps
+  - make get
+
+script: 'make test'
+
+go:
+  - 1.5
